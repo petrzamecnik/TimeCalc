@@ -19,7 +19,7 @@ config = {
     "start_date": "2024-01-01",
     "end_date": "2024-12-31",
     "country_code": "CZ",
-    "working_days_per_week": 4  # Add this configuration for working days per week
+    "working_days_per_week": 4
 }
 
 # API For Holidays - https://www.openholidaysapi.org/en/
@@ -130,7 +130,7 @@ if response.status_code == 200:
     elapsed_working_days = get_working_days_count(year, month, holidays, working_days_per_week, current_date.day)
     banked_hours = calculate_banked_hours(worked_hours, elapsed_working_days)
 
-    # Print detailed info
+    # Print info
     print(f"You worked for {worked_hours} HOURS | {worked_minutes} MINUTES | {worked_seconds} SECONDS \n")
     print(f"In the current month, there are -> {working_days} DAYS | {working_hours} HOURS")
     print(f"You need to work for            -> {remaining_days:.2f} DAYS | {remaining_hours:.2f} HOURS")
